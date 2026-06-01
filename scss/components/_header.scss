@@ -1,0 +1,63 @@
+@use '../utils/config';
+@use '../base/shared';
+
+.header {
+  .container {
+    @include shared.container(row, 16px, 20px);
+
+    @include config.respond-to('tablet') {
+      padding: 20px 40px;
+    }
+
+    @include config.respond-to('desktop-xl') {
+      padding: 20px 112px;
+    }
+  }
+
+  .header__nav {
+    display: none;
+
+    @include config.respond-to('desktop-xl') {
+      display: flex;
+      margin-left: 32px;
+      margin-right: auto;
+    }
+
+    .header__nav-list {
+      display: flex;
+      gap: 8px;
+    }
+
+    .header__nav-item {
+      padding-block: 4px;
+      padding-inline: 8px;
+    }
+
+    .header__nav-link {
+      font-weight: 600;
+      font-size: 14px;
+
+      line-height: 1.43;
+      color: config.$neutral-900;
+    }
+  }
+
+  .header__badges-list {
+    display: none;
+
+    @include config.respond-to('tablet') {
+      display: flex;
+      gap: 12px;
+    }
+  }
+
+  .header__mobile-menu-btn {
+    width: 40px;
+    height: 40px;
+    stroke: config.$neutral-900;
+
+    @include config.respond-to('tablet') {
+      display: none;
+    }
+  }
+}

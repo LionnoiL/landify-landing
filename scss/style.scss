@@ -1,0 +1,26 @@
+@use './base/typography';
+@use './utils/config';
+@use 'components/header';
+@use 'components/hero';
+
+body {
+  > .container {
+    max-width: 375px;
+    margin: 0 auto;
+
+    background-image: url('../images/background.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include config.respond-to('tablet') {
+      max-width: 768px;
+      background-image: url('../images/background-t.png');
+    }
+
+    @include config.respond-to('desktop-xl') {
+      max-width: 1440px;
+      background-image: url('../images/background-xl.png');
+    }
+  }
+}

@@ -1,0 +1,105 @@
+@use '../utils/config';
+@use '../base/shared';
+
+.hero {
+  .container {
+    @include shared.container(column, 40px, 20px);
+
+    @include config.respond-to('tablet') {
+      padding: 40px 80px;
+    }
+
+    @include config.respond-to('desktop-xl') {
+      padding: 74px 112px;
+      flex-direction: row;
+      column-gap: 84px;
+    }
+  }
+
+  .hero__title-block {
+    @include shared.container(column, 40px);
+    gap: 32px;
+
+    @include config.respond-to('desktop-xl') {
+      max-width: 696px;
+      padding: 96px 48px 0 0;
+      align-self: flex-start;
+    }
+
+    .hero__title-block-header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      align-self: stretch;
+      text-align: start;
+    }
+  }
+
+  .hero__title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 45px;
+    letter-spacing: -0.9px;
+    color: config.$neutral-900;
+    align-self: stretch;
+
+    @include config.respond-to('tablet') {
+      font-size: 48px;
+      line-height: 60px;
+      letter-spacing: -1.2px;
+    }
+  }
+
+  .hero__description {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .hero__buttons {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+
+    .hero__get-started-btn {
+      border-radius: 8px;
+      background: config.$primary-600;
+      padding: 16px 24px;
+      color: config.$white;
+      font-weight: 600;
+    }
+
+    .hero__watch-video-btn {
+      @extend .hero__get-started-btn;
+      background: transparent;
+      color: config.$primary-600;
+      stroke: config.$primary-600;
+      fill: transparent;
+      gap: 8px;
+    }
+  }
+
+  .hero__mockup {
+    position: relative;
+    width: 320px;
+    height: 640px;
+    margin-top: 80px;
+
+    @include config.respond-to('desktop-xl') {
+      margin-top: 0;
+      margin-right: 84px;
+    }
+
+    .iphone {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .mockup {
+      position: absolute;
+      top: 17px;
+      left: 21px;
+    }
+  }
+}

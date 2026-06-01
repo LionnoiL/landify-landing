@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    >
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
@@ -13,5 +19,111 @@
     <link href="./css/style.css" rel="stylesheet">
     <title>Landify</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <header id="header" class="header">
+        <div class="container">
+          <img
+            class="logo"
+            src="./images/logo.png"
+            alt="logo"
+            width="128"
+            height="32"
+          >
+          <nav class="header__nav">
+            <ul class="header__nav-list">
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#">Features</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#">Pricing</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#">Careers</a>
+              </li>
+              <li class="header__nav-item">
+                <a class="header__nav-link" href="#">Help</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="header__badges-list">
+            <li class="header__badges-item">
+              <a class="header__badges-link" href="#">
+                <img
+                  class="header__badges-img"
+                  src="./images/store-badge.png"
+                  alt="google play market"
+                  width="135"
+                  height="40"
+                >
+              </a>
+            </li>
+            <li class="header__badges-item">
+              <a class="header__badges-link" href="#">
+                <img
+                  class="header__badges-img"
+                  src="./images/aplle-store-badge.png"
+                  alt="apple store"
+                  width="135"
+                  height="40"
+                >
+              </a>
+            </li>
+          </ul>
+          <button class="header__mobile-menu-btn" id="header-mobile-menu-btn">
+            <svg width="24" height="24">
+              <use xlink:href="./images/icons.svg#icon-burger-menu"></use>
+            </svg>
+          </button>
+        </div>
+      </header>
+      <section id="hero" class="hero">
+        <div class="container">
+          <div class="hero__title-block">
+            <div class="hero__title-block-header">
+              <h1 class="hero__title">The easiest way to manage projects</h1>
+              <p class="hero__description">
+                From the small stuff to the big picture, organizes the work so
+                teams know what to do, why it matters, and how to get it done.
+              </p>
+            </div>
+            <div class="hero__buttons">
+              <button type="button" class="hero__get-started-btn">
+                Get Started
+              </button>
+              <button type="button" class="hero__watch-video-btn">
+                <svg width="24" height="24">
+                  <use xlink:href="./images/icons.svg#icon-play"></use>
+                </svg>
+                Watch Video
+              </button>
+            </div>
+          </div>
+          <div class="hero__mockup">
+            <img
+              class="iphone"
+              src="./images/iPhoneX.png"
+              alt=""
+              width="320"
+              height="640"
+            >
+            <img
+              class="mockup"
+              src="./images/mockup.png"
+              alt="iphone"
+              width="279"
+              height="604"
+            >
+            <img
+              class="iphone"
+              src="./images/iPhoneX.png"
+              alt=""
+              width="320"
+              height="640"
+            >
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
 </html>
