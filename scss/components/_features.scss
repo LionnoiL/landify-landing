@@ -1,0 +1,94 @@
+@use '../utils/config';
+@use '../base/shared';
+
+.features {
+  .container {
+    @include shared.container(column, 48px, 20px);
+    gap: 48px;
+
+    @include config.respond-to('tablet') {
+      padding: 80px 40px;
+      gap: 64px;
+    }
+
+    @include config.respond-to('desktop-xl') {
+      padding: 96px 112px;
+    }
+  }
+
+  .features__title-block {
+    @include shared.container(column);
+    gap: 8px;
+    color: config.$neutral-900;
+    max-width: 100%;
+
+    @include config.respond-to('desktop-xl') {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .fetures__title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 45px;
+      letter-spacing: -0.9px;
+
+      @include config.respond-to('desktop-xl') {
+        font-size: 48px;
+        letter-spacing: -1.2px;
+        line-height: 60px;
+      }
+    }
+
+    .features__description {
+      text-align: center;
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  .features__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 48px;
+
+    @include config.respond-to('tablet') {
+      flex-direction: row;
+      row-gap: 64px;
+      column-gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .features__item {
+      @include config.respond-to('tablet') {
+        gap: 24px;
+        max-width: calc((100% - 30px) / 2);
+      }
+
+      @include config.respond-to('desktop-xl') {
+        max-width: calc((100% - 60px) / 3);
+      }
+    }
+  }
+
+  .features__item-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .features__item-title {
+      color: config.$neutral-900;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+    }
+
+    .feature__item-description {
+      color: config.$neutral-700;
+      text-align: center;
+      line-height: 24px;
+    }
+  }
+}

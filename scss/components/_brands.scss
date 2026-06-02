@@ -1,0 +1,28 @@
+@use '../utils/config';
+@use '../base/shared';
+
+.brands {
+  .container {
+    @include shared.container(row, 16px, 20px);
+    border-top: 1px solid config.$neutral-200;
+    border-bottom: 1px solid config.$neutral-200;
+
+    @include config.respond-to('tablet') {
+      padding: 16px 40px;
+    }
+
+    @include config.respond-to('desktop-xl') {
+      padding: 16px 112px;
+    }
+
+    .brands__list {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 64px;
+      row-gap: 32px;
+      justify-content: center;
+      margin: 0 auto;
+      padding-block: 24px;
+    }
+  }
+}
