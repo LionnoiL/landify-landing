@@ -508,6 +508,116 @@ body {
   line-height: 20px;
 }
 
+.metrics .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px 20px;
+  gap: 48px;
+}
+@media (min-width: 768px) {
+  .metrics .container {
+    padding: 80px 40px;
+  }
+}
+@media (min-width: 1440px) {
+  .metrics .container {
+    padding: 80px 112px;
+    gap: 32px;
+    flex-direction: row;
+  }
+}
+.metrics .metrics__head {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #111827;
+  text-align: start;
+}
+@media (min-width: 768px) {
+  .metrics .metrics__head {
+    width: 100%;
+  }
+}
+.metrics .metrics__title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 40px;
+}
+@media (min-width: 768px) {
+  .metrics .metrics__title {
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: -0.9px;
+  }
+}
+@media (min-width: 1440px) {
+  .metrics .metrics__title {
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: -1.2px;
+  }
+}
+@media (min-width: 768px) {
+  .metrics .metrics__description {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}
+.metrics .metrics__list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .metrics .metrics__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    -moz-column-gap: 32px;
+         column-gap: 32px;
+    row-gap: 40px;
+  }
+}
+.metrics .metrics__item {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  color: #111827;
+}
+@media (min-width: 768px) {
+  .metrics .metrics__item {
+    width: calc((100% - 32px) / 2);
+  }
+}
+.metrics .metrics__value-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.metrics .metrics__value {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+}
+@media (min-width: 768px) {
+  .metrics .metrics__value {
+    font-size: 30px;
+    line-height: 40px;
+  }
+}
+@media (min-width: 1440px) {
+  .metrics .metrics__value {
+    font-size: 36px;
+    line-height: 45px;
+    letter-spacing: -0.9px;
+  }
+}
+.metrics .metrics__units {
+  line-height: 24px;
+}
+
 body > .container {
   max-width: 375px;
   margin: 0 auto;
