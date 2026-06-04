@@ -18,9 +18,7 @@
   }
 
   .metrics__head {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    @include shared.flex-col(8px);
     color: config.$neutral-900;
     text-align: start;
 
@@ -55,9 +53,7 @@
   }
 
   .metrics__list {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+    @include shared.flex-col(24px);
     width: 100%;
 
     @include config.respond-to('tablet') {
@@ -69,8 +65,7 @@
   }
 
   .metrics__item {
-    display: flex;
-    gap: 16px;
+    @include shared.flex-row(16px);
     align-items: center;
     color: config.$neutral-900;
 
@@ -80,8 +75,7 @@
   }
 
   .metrics__value-content {
-    display: flex;
-    flex-direction: column;
+    @include shared.flex-col();
     align-items: flex-start;
   }
 

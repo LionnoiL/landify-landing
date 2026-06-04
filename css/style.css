@@ -594,6 +594,7 @@ body {
 .metrics .metrics__value-content {
   display: flex;
   flex-direction: column;
+  gap: 0;
   align-items: flex-start;
 }
 .metrics .metrics__value {
