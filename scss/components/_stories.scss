@@ -1,0 +1,159 @@
+@use '../utils/config';
+@use '../base/shared';
+
+.stories {
+  background: config.$secondary-100;
+
+  .container {
+    @include shared.container(column);
+    padding: 80px 20px 48px 20px;
+    gap: 32px;
+
+    @include config.respond-to('tablet') {
+      padding: 120px 40px 80px 40px;
+      gap: 40px;
+    }
+
+    @include config.respond-to('desktop-xl') {
+      padding: 120px 0px 616px 216px;
+      align-items: flex-start;
+    }
+  }
+
+  .stories__head {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: config.$neutral-900;
+    text-align: start;
+    position: relative;
+    width: 100%;
+
+    @include config.respond-to('desktop-xl') {
+      max-width: 488px;
+    }
+
+    .stories__head-icon {
+      position: absolute;
+      top: -60px;
+      left: -15px;
+      width: 96px;
+      height: 78px;
+
+      @include config.respond-to('tablet') {
+        width: 142px;
+        height: 116px;
+      }
+
+      @include config.respond-to('desktop-xl') {
+        left: -100px;
+      }
+    }
+  }
+
+  .stories__title {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+
+    @include config.respond-to('desktop-xl') {
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 60px;
+      letter-spacing: -1.2px;
+    }
+  }
+
+  .stories__description {
+    @include config.respond-to('desktop-xl') {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+
+  .stories__list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+
+    @include config.respond-to('desktop-xl') {
+      display: block;
+      position: relative;
+    }
+  }
+
+  .stories__item {
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+    padding: 32px;
+    border-radius: 8px;
+    background: config.$white;
+    box-shadow:
+      0 4px 8px -2px rgba(17, 24, 39, 0.1),
+      0 2px 4px -2px rgba(17, 24, 39, 0.06);
+
+    svg {
+      flex-shrink: 0;
+    }
+  }
+
+  .first {
+    @include config.respond-to('desktop-xl') {
+      position: absolute;
+      right: 216px;
+      top: -70px;
+      max-width: 488px;
+    }
+  }
+
+  .second {
+    @include config.respond-to('desktop-xl') {
+      position: absolute;
+      right: 730px;
+      top: 64px;
+      max-width: 384px;
+    }
+  }
+
+  .third {
+    @include config.respond-to('desktop-xl') {
+      position: absolute;
+      right: 216px;
+      top: 264px;
+      max-width: 488px;
+    }
+  }
+
+  .stories__item-content {
+    display: flex;
+    gap: 16px;
+    text-align: start;
+  }
+
+  .stories__content-details {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .strories__feedback {
+    color: config.$neutral-900;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .stories__author-name {
+    color: config.$neutral-900;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+
+  .stories__author-job-title {
+    color: config.$neutral-500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
