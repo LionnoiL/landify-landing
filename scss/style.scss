@@ -6,6 +6,7 @@
 @use 'components/features';
 @use 'components/stories';
 @use 'components/metrics';
+@use 'components/integration';
 
 body {
   > .container {
