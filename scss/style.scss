@@ -7,25 +7,26 @@
 @use 'components/stories';
 @use 'components/metrics';
 @use 'components/integration';
+@use 'components/cta';
 
 body {
   > .container {
     max-width: 375px;
     margin: 0 auto;
 
-    background-image: url('../images/background.png');
+    background-image: url('../images/background.webp');
     background-position: initial;
     background-repeat: no-repeat;
     background-size: contain;
 
     @include config.respond-to('tablet') {
       max-width: 768px;
-      background-image: url('../images/background-t.png');
+      background-image: url('../images/background-t.webp');
     }
 
     @include config.respond-to('desktop-xl') {
       max-width: 1440px;
-      background-image: url('../images/background-xl.png');
+      background-image: url('../images/background-xl.webp');
     }
   }
 }
