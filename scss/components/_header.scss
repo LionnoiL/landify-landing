@@ -14,7 +14,7 @@
     }
   }
 
-  .header__nav {
+  &__nav {
     display: none;
 
     @include config.respond-to('desktop-xl') {
@@ -23,17 +23,17 @@
       margin-right: auto;
     }
 
-    .header__nav-list {
+    .list {
       display: flex;
       gap: 8px;
     }
 
-    .header__nav-item {
+    .item {
       padding-block: 4px;
       padding-inline: 8px;
     }
 
-    .header__nav-link {
+    .link {
       font-weight: 600;
       font-size: 14px;
 
@@ -42,7 +42,7 @@
     }
   }
 
-  .header__badges-list {
+  &__badges-list {
     display: none;
 
     @include config.respond-to('tablet') {
@@ -51,7 +51,7 @@
     }
   }
 
-  .header__mobile-menu-btn {
+  &__mobile-menu-btn {
     width: 40px;
     height: 40px;
     stroke: config.$neutral-900;

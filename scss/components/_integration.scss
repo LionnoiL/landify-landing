@@ -17,39 +17,39 @@
     }
   }
 
-  .integration__head {
+  &__head {
     @include shared.flex-col(8px);
     padding-block: 20px;
     color: config.$neutral-900;
     text-align: start;
-  }
 
-  .integration__title {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 40px;
+    .title {
+      font-size: 30px;
+      font-weight: 700;
+      line-height: 40px;
 
-    @include config.respond-to('tablet') {
-      font-size: 36px;
-      line-height: 45px;
-      letter-spacing: -0.9px;
+      @include config.respond-to('tablet') {
+        font-size: 36px;
+        line-height: 45px;
+        letter-spacing: -0.9px;
+      }
+
+      @include config.respond-to('desktop-xl') {
+        font-size: 48px;
+        line-height: 60px;
+        letter-spacing: -1.2px;
+      }
     }
 
-    @include config.respond-to('desktop-xl') {
-      font-size: 48px;
-      line-height: 60px;
-      letter-spacing: -1.2px;
+    .description {
+      @include config.respond-to('tablet') {
+        font-size: 18px;
+        line-height: 28px;
+      }
     }
   }
 
-  .integration__description {
-    @include config.respond-to('tablet') {
-      font-size: 18px;
-      line-height: 28px;
-    }
-  }
-
-  .integration__logos-list {
+  &__logos-list {
     @include shared.flex-col();
     row-gap: 40px;
     padding-block: 25px;
@@ -75,9 +75,23 @@
       margin-right: 78px;
       row-gap: 64px;
     }
+
+    .item {
+      > img {
+        @include config.respond-to('tablet') {
+          width: 39px;
+          height: 39px;
+        }
+
+        @include config.respond-to('desktop-xl') {
+          width: 64px;
+          height: 64px;
+        }
+      }
+    }
   }
 
-  .integration__top-logos {
+  &__top-logos {
     @include shared.flex-row();
     justify-content: space-around;
     width: 278px;
@@ -92,7 +106,7 @@
     }
   }
 
-  .integration__bottom-logos {
+  &__bottom-logos {
     @include shared.flex-row();
     justify-content: space-around;
     width: 199px;
@@ -104,20 +118,6 @@
 
     @include config.respond-to('desktop-xl') {
       width: 320px;
-    }
-  }
-
-  .integration__logos-item {
-    > img {
-      @include config.respond-to('tablet') {
-        width: 39px;
-        height: 39px;
-      }
-
-      @include config.respond-to('desktop-xl') {
-        width: 64px;
-        height: 64px;
-      }
     }
   }
 }

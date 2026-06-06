@@ -14,15 +14,15 @@
     @include config.respond-to('desktop-xl') {
       padding: 16px 112px;
     }
+  }
 
-    .brands__list {
-      display: flex;
-      flex-wrap: wrap;
-      column-gap: 64px;
-      row-gap: 32px;
-      justify-content: center;
-      margin: 0 auto;
-      padding-block: 24px;
-    }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 64px;
+    row-gap: 32px;
+    justify-content: center;
+    margin: 0 auto;
+    padding-block: 24px;
   }
 }

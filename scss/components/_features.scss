@@ -16,7 +16,7 @@
     }
   }
 
-  .features__title-block {
+  &__title-block {
     @include shared.container(column);
     gap: 8px;
     color: config.$neutral-900;
@@ -27,7 +27,7 @@
       margin: 0 auto;
     }
 
-    .fetures__title {
+    .title {
       text-align: center;
       font-size: 36px;
       font-weight: 700;
@@ -41,14 +41,14 @@
       }
     }
 
-    .features__description {
+    .description {
       text-align: center;
       font-size: 18px;
       line-height: 28px;
     }
   }
 
-  .features__list {
+  &__list {
     display: flex;
     flex-direction: column;
     row-gap: 48px;
@@ -60,7 +60,7 @@
       flex-wrap: wrap;
     }
 
-    .features__item {
+    .item {
       @include config.respond-to('tablet') {
         gap: 24px;
         max-width: calc((100% - 30px) / 2);
@@ -69,26 +69,26 @@
       @include config.respond-to('desktop-xl') {
         max-width: calc((100% - 60px) / 3);
       }
-    }
-  }
 
-  .features__item-content {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
 
-    .features__item-title {
-      color: config.$neutral-900;
-      text-align: center;
-      font-size: 24px;
-      font-weight: 700;
-      line-height: 32px;
-    }
+        .title {
+          color: config.$neutral-900;
+          text-align: center;
+          font-size: 24px;
+          font-weight: 700;
+          line-height: 32px;
+        }
 
-    .feature__item-description {
-      color: config.$neutral-700;
-      text-align: center;
-      line-height: 24px;
+        .description {
+          color: config.$neutral-700;
+          text-align: center;
+          line-height: 24px;
+        }
+      }
     }
   }
 }

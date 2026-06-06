@@ -20,7 +20,7 @@
     }
   }
 
-  .stories__head {
+  &__head {
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -33,7 +33,7 @@
       max-width: 488px;
     }
 
-    .stories__head-icon {
+    .icon {
       position: absolute;
       top: -60px;
       left: -15px;
@@ -49,29 +49,29 @@
         left: -100px;
       }
     }
-  }
 
-  .stories__title {
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 40px;
-
-    @include config.respond-to('desktop-xl') {
-      font-size: 48px;
+    .title {
+      font-size: 30px;
       font-weight: 700;
-      line-height: 60px;
-      letter-spacing: -1.2px;
+      line-height: 40px;
+
+      @include config.respond-to('desktop-xl') {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 60px;
+        letter-spacing: -1.2px;
+      }
+    }
+
+    .description {
+      @include config.respond-to('desktop-xl') {
+        font-size: 18px;
+        line-height: 28px;
+      }
     }
   }
 
-  .stories__description {
-    @include config.respond-to('desktop-xl') {
-      font-size: 18px;
-      line-height: 28px;
-    }
-  }
-
-  .stories__list {
+  &__list {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -81,79 +81,81 @@
       display: block;
       position: relative;
     }
-  }
 
-  .stories__item {
-    display: flex;
-    gap: 32px;
-    flex-direction: column;
-    padding: 32px;
-    border-radius: 8px;
-    background: config.$white;
-    box-shadow:
-      0 4px 8px -2px rgba(17, 24, 39, 0.1),
-      0 2px 4px -2px rgba(17, 24, 39, 0.06);
+    .item {
+      display: flex;
+      gap: 32px;
+      flex-direction: column;
+      padding: 32px;
+      border-radius: 8px;
+      background: config.$white;
+      box-shadow:
+        0 4px 8px -2px rgba(17, 24, 39, 0.1),
+        0 2px 4px -2px rgba(17, 24, 39, 0.06);
 
-    svg {
-      flex-shrink: 0;
+      svg {
+        flex-shrink: 0;
+      }
+
+      .item-content {
+        display: flex;
+        gap: 16px;
+        text-align: start;
+      }
+
+      .content-details {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        .feedback {
+          color: config.$neutral-900;
+          font-size: 18px;
+          line-height: 28px;
+
+          .author {
+            .name {
+              color: config.$neutral-900;
+              font-size: 18px;
+              font-weight: 700;
+              line-height: 28px;
+            }
+
+            .job-title {
+              color: config.$neutral-500;
+              font-size: 14px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
     }
-  }
 
-  .first {
-    @include config.respond-to('desktop-xl') {
-      position: absolute;
-      right: 216px;
-      top: -70px;
-      max-width: 488px;
+    .first {
+      @include config.respond-to('desktop-xl') {
+        position: absolute;
+        right: 216px;
+        top: -70px;
+        max-width: 488px;
+      }
     }
-  }
 
-  .second {
-    @include config.respond-to('desktop-xl') {
-      position: absolute;
-      right: 730px;
-      top: 64px;
-      max-width: 384px;
+    .second {
+      @include config.respond-to('desktop-xl') {
+        position: absolute;
+        right: 730px;
+        top: 64px;
+        max-width: 384px;
+      }
     }
-  }
 
-  .third {
-    @include config.respond-to('desktop-xl') {
-      position: absolute;
-      right: 216px;
-      top: 264px;
-      max-width: 488px;
+    .third {
+      @include config.respond-to('desktop-xl') {
+        position: absolute;
+        right: 216px;
+        top: 264px;
+        max-width: 488px;
+      }
     }
-  }
-
-  .stories__item-content {
-    display: flex;
-    gap: 16px;
-    text-align: start;
-  }
-
-  .stories__content-details {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .strories__feedback {
-    color: config.$neutral-900;
-    font-size: 18px;
-    line-height: 28px;
-  }
-
-  .stories__author-name {
-    color: config.$neutral-900;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 28px;
-  }
-
-  .stories__author-job-title {
-    color: config.$neutral-500;
-    font-size: 14px;
-    line-height: 20px;
   }
 }
