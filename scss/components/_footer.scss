@@ -1,2 +1,70 @@
 @use '../utils/config';
 @use '../base/shared';
+
+.footer {
+  background: config.$black;
+  color: config.$neutral-300;
+
+  .container {
+    @include shared.container(column, 40px, 20px);
+    gap: 32px;
+    align-items: flex-start;
+
+    @include config.respond-to('tablet') {
+      padding: 64px 40px;
+      gap: 0;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    @include config.respond-to('desktop-xl') {
+      flex-direction: row;
+
+      padding: 64px 112px;
+    }
+  }
+
+  &__left-section {
+    @include shared.flex-col(24px);
+
+    .links {
+      @include shared.flex-col(12px);
+    }
+
+    .rows-wraper {
+      @include shared.flex-col(12px);
+
+      @include config.respond-to('tablet') {
+        gap: 24px;
+        flex-direction: row;
+      }
+    }
+
+    .row-list {
+      @include shared.flex-row(24px);
+      flex-wrap: wrap;
+    }
+
+    .link {
+      color: config.$white;
+    }
+
+    .copyright {
+      font-size: 14px;
+      line-height: 20px;
+      text-align: start;
+    }
+  }
+
+  .get-app-block {
+    @include shared.flex-col(16px);
+    align-items: flex-start;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+
+    .list {
+      @include shared.flex-col(16px);
+    }
+  }
+}
