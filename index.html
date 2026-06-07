@@ -589,5 +589,76 @@
         </div>
       </footer>
     </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="container">
+        <button
+          type="button"
+          aria-label="close menu"
+          class="close"
+          id="close-mobile-menu-button"
+        >
+          <svg width="8" height="8">
+            <use xlink:href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <nav class="mobile-menu__nav">
+          <ul class="list">
+            <li class="item">
+              <a class="link" href="#">About</a>
+            </li>
+            <li class="item">
+              <a class="link" href="#">Features</a>
+            </li>
+            <li class="item">
+              <a class="link" href="#">Pricing</a>
+            </li>
+            <li class="item">
+              <a class="link" href="#">News</a>
+            </li>
+            <li class="item">
+              <a class="link" href="#">Help</a>
+            </li>
+            <li class="item">
+              <a class="link" href="#">Contact</a>
+            </li>
+          </ul>
+        </nav>
+
+        <img
+          class="logo"
+          src="./images/logo.webp"
+          alt="logo"
+          width="128"
+          height="32"
+        >
+      </div>
+    </div>
+
+    <script>
+      const burgerMenuButtom = document.querySelector(
+        '#header-mobile-menu-btn'
+      );
+      const mobileMenu = document.querySelector('#mobile-menu');
+      const closeMobileMenuButton = document.querySelector(
+        '#close-mobile-menu-button'
+      );
+
+      burgerMenuButtom.addEventListener('click', () => {
+        mobileMenu.classList.add('is-open');
+        document.body.classList.add('no-scroll');
+      });
+
+      closeMobileMenuButton.addEventListener('click', () => {
+        mobileMenu.classList.remove('is-open');
+        document.body.classList.remove('no-scroll');
+      });
+
+      mobileMenu.addEventListener('click', function (event) {
+        if (event.target.classList.contains('link')) {
+          mobileMenu.classList.remove('is-open');
+          document.body.classList.remove('no-scroll');
+        }
+      });
+    </script>
   </body>
 </html>
